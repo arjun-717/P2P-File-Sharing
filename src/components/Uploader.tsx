@@ -3,7 +3,7 @@
 import React, { JSX, useCallback, useEffect } from 'react'
 import { UploadedFile, UploaderConnectionStatus } from '../types'
 import { useWebRTCPeer } from './WebRTCProvider'
-// import QRCode from 'react-qr-code'
+import QRCode from 'react-qr-code'
 import Loading from './Loading'
 import StopButton from './StopButton'
 import { useUploaderChannel } from '../hooks/useUploaderChannel'
@@ -54,7 +54,8 @@ export default function Uploader({
     <>
       <div className="flex w-full items-center">
         <div className="flex-none mr-4">
-          {/* <QRCode value={shortURL ?? ''} size={QR_CODE_SIZE} /> */}
+         
+           <QRCode value={shortURL ?? ''} size={QR_CODE_SIZE} /> 
         </div>
         <div className="flex-auto flex flex-col justify-center space-y-2 mr-[20px]">
           <CopyableInput label="URL" value={longURL ?? ''} />

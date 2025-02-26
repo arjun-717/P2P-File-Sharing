@@ -5,7 +5,9 @@ import Spinner from '../../../components/Spinner'
 import Wordmark from '../../../components/Wordmark'
 import Downloader from '../../../components/Downloader'
 import WebRTCPeerProvider from '../../../components/WebRTCProvider'
-import ReportTermsViolationButton from '../../../components/ReportTermsViolationButton'
+
+
+// import ReportTermsViolationButton from '../../../components/ReportTermsViolationButton'
 
 const normalizeSlug = (rawSlug: string | string[]): string => {
   if (typeof rawSlug === 'string') {
@@ -29,15 +31,16 @@ export default async function DownloadPage({
   }
 
   return (
-    <div className="flex flex-col items-center space-y-5 py-10 max-w-2xl mx-auto">
+    <div className="relative flex flex-col items-center space-y-5 py-10 max-w-2xl mx-auto">
+      {/* Background Waves */}
+  
+
+      {/* Foreground Content */}
       <Spinner direction="down" />
       <Wordmark />
       <WebRTCPeerProvider>
         <Downloader uploaderPeerID={channel.uploaderPeerID} />
-        <ReportTermsViolationButton
-          uploaderPeerID={channel.uploaderPeerID}
-          slug={slug}
-        />
+        {/* <ReportTermsViolationButton uploaderPeerID={channel.uploaderPeerID} slug={slug} /> */}
       </WebRTCPeerProvider>
     </div>
   )

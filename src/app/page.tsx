@@ -15,14 +15,20 @@ import { useMemo } from 'react'
 import { getFileName } from '../fs'
 import TitleText from '../components/TitleText'
 import { pluralize } from '../utils/pluralize'
+
+
 // import TermsAcceptance from '../components/TermsAcceptance'
 
 function PageWrapper({ children }: { children: React.ReactNode }): JSX.Element {
+  const [wave,setWave] = useState(true);
   return (
+    
     <div className="flex flex-col items-center space-y-5 py-10 max-w-2xl mx-auto px-4">
+   
       <Spinner direction="up" />
       <Wordmark />
       {children}
+      
     </div>
   )
 }
@@ -37,6 +43,8 @@ function InitialState({
       <div className="flex flex-col items-center space-y-1 max-w-md">
         <TitleText>Peer-to-peer file transfers in your browser.</TitleText>
       </div>
+      
+
       <DropZone onDrop={onDrop} />
       {/* <TermsAcceptance /> */}
     </PageWrapper>
@@ -70,17 +78,27 @@ function ConfirmUploadState({
   const fileListData = useUploaderFileListData(uploadedFiles)
   return (
     <PageWrapper>
+         
+     
       <TitleText>
         You are about to start uploading{' '}
         {pluralize(uploadedFiles.length, 'file', 'files')}.
       </TitleText>
       <UploadFileList files={fileListData} onRemove={onRemoveFile} />
+
+        
       <PasswordField value={password} onChange={onChangePassword} />
       <div className="flex space-x-4">
         <CancelButton onClick={onCancel} />
         <StartButton onClick={onStart} />
       </div>
+
+
+     
+
+
     </PageWrapper>
+    
   )
 }
 
