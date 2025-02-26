@@ -1,4 +1,5 @@
 import { JSX } from 'react'
+// import TextPressure from './background/AnimationText'
 
 export default function Wordmark(): JSX.Element {
   return (
@@ -42,6 +43,29 @@ export default function Wordmark(): JSX.Element {
     //   />
     // </svg>
     <>
-    <h1 style={{fontSize:"40px" , fontWeight:"bold",marginLeft :"20px"}}> P2P FILE SHARING SYSTEM</h1></>
+
+    <h1 style={{fontSize:"40px" , fontWeight:"bold",marginLeft :"20px"}}> P2P FILE SHARING SYSTEM</h1>
+    
+    </>
+   
+
+// Note:
+// Make sure the font you're using supports all the variable properties. 
+// React Bits does not take responsibility for the fonts used
+
+// <div style={{position: 'relative', height: '300px'}}>
+//   <TextPressure
+//     text="Hello!"
+//     flex={true}
+//     alpha={false}
+//     stroke={false}
+//     width={true}
+//     weight={true}
+//     italic={true}
+//     textColor="#ffffff"
+//     strokeColor="#ff0000"
+//     minFontSize={36}
+//   />
+// </div>
   )
 }

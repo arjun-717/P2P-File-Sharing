@@ -1688,7 +1688,7 @@ export default function Spinner({
 }): JSX.Element {
   const isRotating = useRotatingSpinner()
   return (
-    <div className="relative w-[400px] h-[170px]">
+    <div className="relative w-[0px] h-[0px]">
       {/* <Pizza isRotating={isRotating} /> */}
       <div className="absolute inset-0 flex items-center justify-center">
         {/* <Arrow direction={direction} /> */}
