@@ -16,14 +16,13 @@ import { getFileName } from '../fs'
 import TitleText from '../components/TitleText'
 import { pluralize } from '../utils/pluralize'
 import TextPressure from '../components/background/AnimationText';
-import StarBorder from '../components/background/AnimatedTitle'
 
 // import TermsAcceptance from '../components/TermsAcceptance'
 
 function PageWrapper({ children }: { children: React.ReactNode }): JSX.Element {
-  const [wave, setWave] = useState(true)
+
   return (
-    <div className="flex flex-col items-center space-y-5 py-10 max-w-2xl mx-auto px-4">
+    <div className="flex flex-col items-center spacey-5 py-10 max-w-2xl mx-auto px-4">
       <Spinner direction="up" />
       
 
